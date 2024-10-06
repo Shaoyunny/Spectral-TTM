@@ -8,7 +8,7 @@ def Spectral_TTM_calculate_perplexity(theta,phi,E,H,user_num,text_data,item_num,
                 for p in range(P):
                     for q in range(Q):
                         for k in range(K):
-                            prob+=theta[k][p][q]*E[p][i]*H[q][j]*phi[vocab _index][k]
+                            prob+=theta[k][p][q]*E[p][i]*H[q][j]*phi[vocab_index][k]
                             prob_list.append(prob) 
     N=len(prob_list) 
     TTM_perplexity=1 
