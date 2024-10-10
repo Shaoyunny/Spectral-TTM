@@ -12,8 +12,16 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def main():
+    df=pd.read_csv("our_path",encoding='utf-8')
+
+    x= df.iloc[:,:] # 选取 data 所有行、所有列数据
+    train_data, tem_data = train_test_split(x, test_size=0.2, random_state=0)
+    train_data = train_data.reset_index(drop=True)
+    tem_data = tem_data.reset_index(drop=True)
+    train_data = train_data.dropna()
+    
     # Load training data
-    train_data = pd.read_csv("our_path", encoding='utf-8')
+    #train_data = pd.read_csv("our_path", encoding='utf-8')
     train_data_text = train_data['reviewText']
     data = train_data_text.values.tolist()
 
