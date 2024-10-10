@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 
 def main():
     # Load training data
-    train_data = pd.read_csv("/home/suibe/wmk/zsy/dataset/AMAZON_FASHION_5_deal5_train.csv", encoding='utf-8')
+    train_data = pd.read_csv("our_path", encoding='utf-8')
     train_data_text = train_data['reviewText']
     data = train_data_text.values.tolist()
 
